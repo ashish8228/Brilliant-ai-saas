@@ -1,7 +1,6 @@
 "use client"
 
 import { cn } from "@/lib/utils";
-import Navbar from '@/components/Navbar';
 import { Card } from '@/components/ui/card';
 import { ArrowRight, Code, ImageIcon, MessageSquare, Music, VideoIcon } from 'lucide-react';
 import { useRouter } from "next/navigation";
@@ -11,7 +10,7 @@ const tools = [{
   icon: MessageSquare,
   color: "text-violet-500",
   bgColor: "bg-violet-500/10",
-  href: "/conversartion"
+  href: "/conversation"
 },
 {
   label: "Music Generation",
@@ -20,7 +19,7 @@ const tools = [{
   bgColor: "bg-emerald-500/10",
   href: "/music"
 },
-{
+{ 
   label: "Image Generation",
   icon: ImageIcon,
   color: "text-pink-700",
@@ -48,7 +47,6 @@ const DashboardPage = () => {
   const router = useRouter();
   return (
     <div>
-      <Navbar />
       <div className='mb-8 space-y-4'>
         <h2 className='text-2xl md:text-4xl font-bold text-center'>
           Explore the Power of AI

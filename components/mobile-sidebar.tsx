@@ -10,19 +10,21 @@ const MobileSidebar = () => {
 
   const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(()=>{
-setIsMounted(true)
-  },[])
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
-  if(! isMounted){
+  if (!isMounted) {
     return null;
   }
   return (
     <Sheet>
-      <SheetTrigger>
-        <Button variant="ghost" size="icon" className="md:hidden">
-          <Menu />
-        </Button>
+      <SheetTrigger
+        render={
+          <Button variant="ghost" size="icon" className="md:hidden" />
+        }
+      >
+        <Menu />
       </SheetTrigger>
       <SheetContent side="left" className="p-0">
         <Sidebar />
